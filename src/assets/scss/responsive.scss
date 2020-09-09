@@ -1,0 +1,311 @@
+@media only screen and (max-width: 600px) {
+    .main-content {
+      padding-top: 50px !important;
+    }
+    .sideDiv {
+      display: none !important;
+    }
+    ._smallScreenText {
+      font-size: 15px !important;
+    }
+    .noPaddingSmallScreen {
+      padding: 0 !important;
+    }
+    .colon {
+      display: none;
+    }
+    // .playStoreLogo{
+    //     width: 100% !important;
+    // }
+    .order1 {
+      order: 2 !important;
+    }
+    .order2 {
+      order: 1 !important;
+    }
+    .routingDiv {
+      // position: relative;
+      // height: calc(100vh - 52px);
+      width: 100% !important;
+      // float: right;
+      // overflow-y: auto;
+    }
+    .wrapper {
+      margin-top: 79px !important;
+    }
+    .navbar {
+      display: none !important;
+    }
+    .responsiveNavbar {
+      display: flex !important;
+    }
+    .alingCenterlineParentHeading {
+      display: flex;
+      align-items: flex-start !important;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .infoAlingCenterLine {
+      display: inline !important;
+    }
+    .mat-content {
+      display: inline !important;
+    }
+    .bigTabel {
+      display: none !important;
+    }
+    ._responsiveTabel {
+      display: inline !important;
+    }
+  
+    .mat-expansion-panel-header {
+      align-items: baseline !important;
+    }
+    .widthAdj {
+      width: 200px !important;
+      font-size: 10px;
+    }
+    .notResponsiveSurveyButton {
+      display: none !important;
+    }
+    .responsiveSurveyButton {
+      display: flex !important;
+      margin-bottom: 15px;
+    }
+    .responsiveNextButton {
+      position: absolute !important;
+      display: flex !important;
+    }
+    .responsiveQuestion {
+      font-size: 15px;
+    }
+    .checkBoxAdj {
+      margin: 10px 10px !important ;
+    }
+    .radio {
+      font-size: 10px !important;
+    }
+    .checkBox {
+      font-size: 10px !important;
+    }
+    .select {
+      font-size: 10px !important;
+    }
+    .questionFooter {
+      z-index: 0 !important;
+      height: 0 !important;
+      position: relative !important;
+    }
+    .card {
+      padding: 0px;
+    }
+    .justifyContentflexStart {
+      justify-content: flex-start !important;
+    }
+    ._halfWidth {
+      width: 100%;
+    }
+    .dashboard {
+      display: flex !important;
+      justify-content: center !important;
+      width: 100%;
+    }
+  
+    .dropdownDiv {
+      width: 200px !important;
+      display: flex !important;
+    }
+    .dashboard-content {
+      padding-top: 0px !important;
+    }
+    .card-space {
+      margin-top: 10% !important;
+    }
+    .desktop-tab {
+      display: none !important;
+    }
+  
+    .mobile-tab {
+      display: block !important;
+    }
+    .header-icons {
+      display: none !important;
+    }
+    .btn-logout {
+      display: block !important;
+    }
+    .c-menu {
+      display: block !important;
+      padding-left: 15px !important;
+    }
+  
+    .h-toolbar {
+      position: inherit !important;
+    }
+  
+   
+  }
+  
+  @media only screen and (min-width: 600px) {
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .h-toolbar {
+      position: inherit !important;
+    }
+    .c-menu {
+      display: block !important;
+      padding-left: 15px !important;
+    }
+  
+    .main-content {
+      padding-top: 50px !important;
+    }
+  
+    .btn-logout {
+      display: block !important;
+    }
+    .header-icons {
+      display: none !important;
+    }
+    .navbar {
+      display: none !important;
+    }
+    .bigTabel {
+      display: none !important;
+    }
+    ._responsiveTabel {
+      display: inline !important;
+    }
+  
+    .noPaddingSmallScreen {
+      padding: 0 !important;
+    }
+    ._smallScreenText {
+      font-size: 15px !important;
+    }
+    .order1 {
+      order: 2 !important;
+    }
+    .order2 {
+      order: 1 !important;
+    }
+    // .playStoreLogo{
+    //     width: 100% !important;
+    // }
+    .mat-expansion-panel-header {
+      align-items: baseline !important;
+    }
+    .widthAdj {
+      width: 200px !important;
+      font-size: 10px;
+    }
+    .notResponsiveSurveyButton {
+      display: none !important;
+    }
+    .responsiveSurveyButton {
+      display: flex !important;
+      margin-bottom: 15px;
+    }
+    .responsiveNextButton {
+      position: absolute !important;
+      display: flex !important;
+    }
+    .responsiveQuestion {
+      font-size: 15px;
+    }
+    .radio {
+      font-size: 10px !important;
+    }
+    .checkBox {
+      font-size: 10px !important;
+    }
+    .select {
+      font-size: 10px !important;
+    }
+    .questionFooter {
+      z-index: 0 !important;
+      height: 0 !important;
+      position: relative !important;
+    }
+    .justifyContentflexStart {
+      justify-content: flex-start !important;
+    }
+    ._halfWidth {
+      width: 100%;
+    }
+  
+    .nextButton {
+      width: 100 !important;
+      right: 20px;
+    }
+  
+    .dropdownDiv {
+      width: 300px !important;
+      display: flex !important;
+    }
+  
+    .dropdownFeature {
+      width: 100% !important;
+      justify-content: center !important;
+      padding-left: 0px !important;
+    }
+  
+    .dropdownDiv:before {
+      right: 21px !important;
+    }
+    .dropdownDiv:after {
+      right: 21px !important;
+    }
+  
+    .dashboard {
+      width: 100% !important;
+      display: flex !important;
+      padding: 0px 26%;
+    }
+    .wrapper {
+      margin-top: 100px !important;
+    }
+    .dashboard-content {
+      padding-top: 0px !important;
+    }
+    .card-space {
+      margin-top: 10% !important;
+    }
+    .desktop-tab {
+      display: none !important;
+    }
+  
+    .mobile-tab {
+      display: block !important;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+  }
+  
+  @media only screen and (min-width: 1200px) {
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .dropdownDiv {
+      width: 200px !important;
+      display: flex !important;
+    }
+    // .playStoreLogo{
+    //     width: 100% !important;
+    // }
+    .order1 {
+      order: 2 !important;
+    }
+    .order2 {
+      order: 1 !important;
+    }
+    .noPaddingSmallScreen {
+      padding: 0 !important;
+    }
+    ._smallScreenText {
+      font-size: 15px !important;
+    }
+  }
+  

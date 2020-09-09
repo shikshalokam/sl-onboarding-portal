@@ -1,0 +1,5 @@
+<!-- <lib-page-layout></lib-page-layout> -->
+<!-- <router-outlet></router-outlet> -->
+<lib-page-layout [logindetails] ="userDetails" [sideMenuData]="menudata" (sideMenuClick)="selectedMenu($event)">
+</lib-page-layout>
+<lib-headers (languageChange) = "changeLanguage($event)"  [logindetails] ="userDetails" (logoutClick)="logoutMethod($event)"></lib-headers>

@@ -1,0 +1,50 @@
+@import '~@angular/material/theming';
+@import './assets/scss/variables.scss';
+@include mat-core();
+
+// @import '~@angular/material/theming';
+$my-primary-color: (
+  50: #f4e7e7,
+  100: #e4c4c3,
+  200: #d39c9b,
+  300: #c17472,
+  400: #b35754,
+  500: #a63936,
+  600: #9e3330,
+  700: #952c29,
+  800: #8b2422,
+  900: #7b1716,
+  A100: #ffb2b2,
+  A200: #ff807f,
+  A400: #ff4d4c,
+  A700: #ff3432,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+// below creates a primary palette with three shades of blue
+$my-app-primary: mat-palette($my-primary-color);
+// $my-app-primary: mat-palette($mat-light-blue);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}

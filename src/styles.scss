@@ -1,0 +1,191 @@
+// /* You can add global styles to this file, and also import other style files */
+
+@import "./theme.scss";
+@import "./assets/scss/variables.scss";
+
+
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  // -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $regular-font;
+  font-size: 14px;
+}
+
+._flex-box {
+  display: flex;
+  align-items: center;
+}
+._responsiveTabel {
+  display: none;
+  width: 100%;
+}
+._flex-direction-column {
+  flex-direction: column;
+}
+
+._justify-content-center {
+  justify-content: center;
+}
+
+._justify-content-space-between {
+  justify-content: space-between;
+}
+
+._flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+._full-width {
+  width: 100%;
+}
+._margin-top {
+  margin-top: 20px !important;
+}
+._small-margin-top {
+  margin-top: 10px !important;
+}
+._small-margin-bottom {
+  margin-bottom: 10px !important;
+}
+._margin-bottom {
+  margin-bottom: 20px !important;
+}
+._cursor-pointer {
+  cursor: pointer;
+}
+.imageText {
+  color: #5e5f62 !important;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+._green-btn {
+  background: $green-color;
+  color: $white-color;
+}
+._smallScreenText {
+  font-size: 18px;
+}
+._primary-btn {
+  background: $primary-color;
+  color: $white-color;
+}
+span:focus {
+  outline: none;
+  border: 0;
+}
+._helveticaFont {
+  font-family: Helvetica !important;
+}
+
+mat-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  color: $primary-color;
+  height: 20px;
+  width: 24px;
+  font-size: 30px;
+}
+
+.mat-drawer-side {
+  border: none !important;
+  z-index: 0 !important;
+}
+
+// ._dashboard-content {
+//   padding: 100px 50px 15px 50px;
+// }
+
+._p-button {
+  background-color: $primary-color;
+  color: $white-color;
+  font-weight: 600;
+}
+
+._text-color {
+  color: $text-color;
+}
+
+.main-content {
+  padding: 20px;
+  padding-top: 140px;
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.desktop-tab {
+  display: block;
+}
+
+.mobile-tab {
+  display: none;
+}
+.header-icons {
+  display: block;
+}
+
+.btn-logout {
+  display: none;
+}
+
+
+
+.h-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+// mat-form-field {
+//   width: 100%;
+// }
+mat-card {
+  word-break: break-word;
+}
+
+*:focus {
+  outline: none !important;
+  border: 0 !important;
+}
+
+// .mat-form-field-infix {
+//   box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75) !important;
+// }
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+ 
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+
