@@ -35,7 +35,6 @@
     "ngx-spinner": "^6.1.2",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.6.3",
-    "shikshalokam": "file:../sl-npm-library/dist/shikshalokam/shikshalokam-0.0.1.tgz",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
