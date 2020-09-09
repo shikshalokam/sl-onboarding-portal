@@ -1,0 +1,22 @@
+<div class="profile-form">
+    <mat-form-field class="full-width-field" *ngIf="states">
+        <mat-label>Choose your State <sup> * </sup></mat-label>
+        <mat-select (selectionChange)="getRoles($event)">
+            <mat-option [value]="state._id" *ngFor="let state of states">{{state.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-width-field" *ngIf="roles">
+        <mat-label>Choose your State <sup> * </sup></mat-label>
+        <mat-select (selectionChange)="getsubEntity($event)">
+            <mat-option [value]="role._id" *ngFor="let role of roles">{{role.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Choose your District</mat-label>
+        <input type="text" matInput (click)="onFocusEvent($event)">
+        <mat-icon matSuffix>arrow_right_alt</mat-icon>
+    </mat-form-field>
+</div>
+<app-loader [show]="showLoader"></app-loader>

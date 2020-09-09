@@ -9,11 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortalCoreModule } from './modules/portal-core/portal-core.module';
 import { PortalSharedModule } from './modules/portal-shared/portal-shared.module';
 import { MatMenuModule } from '@angular/material/menu';
-import { CoreModuleModule } from 'shikshalokam';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
 import {TranslateModule, TranslateLoader, TranslateService} from "@ngx-translate/core";
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
-
+import { OnboardComponent } from './onboard/onboard.component';
+import { LoaderComponent } from './loader/loader.component';
+import { SelectEntityModalComponent } from './select-entity-modal/select-entity-modal.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -22,7 +25,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    OnboardComponent,
+    LoaderComponent,
+    SelectEntityModalComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     PortalCoreModule,
     PortalSharedModule,
     MatMenuModule,
-    CoreModuleModule,
+    MatInputModule,
+    MatFormFieldModule,
     TranslateModule.forChild(),
     TranslateModule.forRoot({
       loader: {
