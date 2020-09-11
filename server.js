@@ -6,10 +6,10 @@ var path = require("path");
 
 
 
-app.use('/', express.static('dist/sl-community-portal'))
+app.use('/', express.static('dist/sl-onboarding-portal'))
 app.get("/*", function (req, res) {
   console.log(__dirname)
-  res.sendFile(path.join(__dirname, "/dist/sl-community-portal/index.html"));
+  res.sendFile(path.join(__dirname, "/dist/sl-onboarding-portal/index.html"));
 });
 
 //listen to given port
