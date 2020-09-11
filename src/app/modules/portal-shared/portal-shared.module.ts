@@ -33,7 +33,7 @@ import {
   MatSidenavModule,
 } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
-import { SharedModuleModule } from 'shikshalokam';
+// import { SharedModuleModule } from 'shikshalokam';
 
 
 
@@ -69,7 +69,7 @@ import { SharedModuleModule } from 'shikshalokam';
     MatButtonToggleModule,
     MatSidenavModule,
     RouterModule,
-    SharedModuleModule
+    // SharedModuleModule
   ],
   exports: [
     FormsModule, ReactiveFormsModule,
@@ -100,7 +100,7 @@ import { SharedModuleModule } from 'shikshalokam';
     MatButtonToggleModule,
     MatSidenavModule,
     RouterModule,
-    SharedModuleModule
+    // SharedModuleModule
     // TranslateModule
   ],
   schemas: [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA],

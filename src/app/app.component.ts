@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.userDetails = user['profile'];
   }
 
-  logoutMethod(data){
+  logoutMethod(){
     this.Keycloak.logout();
   //  this.Keycloak.logout(environment.portal_name).then();
   }
