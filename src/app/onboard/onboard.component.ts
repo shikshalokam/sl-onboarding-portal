@@ -86,10 +86,18 @@ export class OnboardComponent implements OnInit {
   getProfileData() {
     this.showLoader = true;
     this.onboardService.getProfileData().subscribe((data: any) => {
-      (data.result.roles && data.result.roles.length) ? this.showPreview = true : this.getState();
-      this.profileRoles = data.result.roles;
-      this.getStatesValue();
+      if(data.result.roles && data.result.roles.length){
+        this.showPreview = true;
+        this.profileRoles = data.result.roles;
+        this.getStatesValue();
+      } else {
+        this.getState()
+      }
       this.showLoader = false;
+      // (data.result.roles && data.result.roles.length) ? this.showPreview = true : this.getState();
+      // this.profileRoles = data.result.roles;
+      // this.getStatesValue();
+      // this.showLoader = false;
     }, error => {
       this.showLoader = false;
       console.log(error, "error")
@@ -260,7 +268,7 @@ export class OnboardComponent implements OnInit {
     console.log(payload)
     this.showLoader = true;
     const url = ""
-    this.onboardService.profileUpdate(url, payload).subscribe((data: any) => {
+    this.onboardService.profileUpdate(payload).subscribe((data: any) => {
       // this.showLoader = false;
       this.getProfileData();
     }, error => {

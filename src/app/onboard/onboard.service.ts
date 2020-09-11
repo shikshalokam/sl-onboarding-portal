@@ -29,7 +29,7 @@ export class OnboardService {
         return this.http.get(environment.apiUrl + '/kendra/api/v1/entities/subEntityList/' + params)
     }
 
-    public profileUpdate(url, payload) {
-        return this.http.post(environment.apiUrl + '/kendra/api/v1/user-extension/create/' + url, payload)
+    public profileUpdate( payload) {
+        return this.http.post(environment.apiUrl + '/kendra/api/v1/user-extension/updateProfileRoles', payload)
     }
 }
