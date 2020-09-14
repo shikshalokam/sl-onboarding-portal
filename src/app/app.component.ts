@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'sl-angular-basic';
   userDetails: any = '';
   menudata: any[];
+  appName: string = environment.appName;
 
   constructor(private Keycloak: KeycloakService, public translate: TranslateService){
     // translate.addLangs(['en', 'od']);

@@ -1,25 +1,6 @@
 <div class="container">
     <div class="innerContainer">
         <div class="profile-form fullWidth" *ngIf="!showPreview && !showLoader">
-            <!-- <mat-form-field class="full-width-field" appearance="fill" *ngIf="states">
-                <mat-label>Choose your State <sup> * </sup></mat-label>
-                <mat-select (selectionChange)="getRolesForState($event)" [(ngModel)]="selectedState">
-                    <mat-option [value]="state._id" *ngFor="let state of states">{{state.name}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field> -->
-            <!-- <mat-form-field class="full-width-field" appearance="fill" *ngIf="roles && roles?.length">
-                <mat-label>Choose your Role <sup> * </sup></mat-label>
-                <mat-select (selectionChange)="getSubEntitiesForm($event)" [(ngModel)]="selectedRole">
-                    <mat-option [value]="role._id" *ngFor="let role of roles">{{role.title}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field> -->
-            <!-- <mat-form-field class="example-full-width">
-                <mat-label>Choose your District</mat-label>
-                <input type="text" matInput (click)="onFocusEvent($event)">
-                <mat-icon matSuffix>arrow_right_alt</mat-icon>
-            </mat-form-field> -->
             <div *ngIf="formGroup">
                 <form [formGroup]="formGroup">
                     <div *ngFor="let form_elem of dynamicForm;let i = index">
@@ -49,19 +30,12 @@
                         </mat-form-field>
                     </div>
 
-                    <button mat-flat-button color="primary" style="width: 100%;"
-                        [disabled]="!formGroup.valid" (click)="submitForm()">Save</button>
+                    <button mat-flat-button color="primary" style="width: 100%;" [disabled]="!formGroup.valid"
+                        (click)="submitForm()">Save</button>
 
                 </form>
             </div>
         </div>
-
-
-
-
-
-
-
 
         <div class="fullWidth innerContainer" *ngIf="showPreview && !showLoader">
             <h3>
