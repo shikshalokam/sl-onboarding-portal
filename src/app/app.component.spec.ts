@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sl-angular-basic'`, () => {
+  it(`should have as title 'sl-onboarding-portal'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sl-angular-basic');
+    expect(app.title).toEqual('sl-onboarding-portal');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('sl-angular-basic app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('sl-onboarding-portal app is running!');
   });
 });

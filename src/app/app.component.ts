@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   title = 'sl-angular-basic';
   userDetails: any = '';
   menudata: any[];
+  appName: string = environment.appName;
 
   constructor(private Keycloak: KeycloakService, public translate: TranslateService){
     // translate.addLangs(['en', 'od']);
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
     this.userDetails = user['profile'];
   }
 
-  logoutMethod(data){
+  logoutMethod(){
     this.Keycloak.logout();
   //  this.Keycloak.logout(environment.portal_name).then();
   }
