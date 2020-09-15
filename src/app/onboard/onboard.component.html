@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="innerContainer">
+        <div class="profile-form fullWidth" *ngIf="!showPreview && !showLoader">
+            <div *ngIf="formGroup">
+                <form [formGroup]="formGroup">
+                    <div *ngFor="let form_elem of dynamicForm;let i = index">
+                        <!-- <div *ngIf="form_elem?.input ==='special-select'" class="special"></div> -->
+                        <mat-form-field *ngIf="form_elem?.input ==='text'" class="full-width-field" appearance="fill">
+                            <mat-label>{{form_elem?.label}} <sup *ngIf="form_elem?.validation?.required"> * </sup>
+                            </mat-label>
+                            <mat-select formControlName="{{form_elem.field}}">
+                                <mat-option [value]="option._id" *ngFor="let option of form_elem.options">
+                                    {{option.name || option?.title}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+
+                        <mat-form-field class="example-chip-list" *ngIf="form_elem?.input !=='text'">
+                            <mat-chip-list #chipList aria-label="Fruit selection" formControlName="{{form_elem.field}}">
+                                <mat-chip *ngFor="let option of form_elem?.options" [selectable]="false"
+                                    [removable]="true" (removed)="removeChip(i)">
+                                    {{option?.label || option?.name}}
+                                    <mat-icon matChipRemove *ngIf="true">cancel</mat-icon>
+                                </mat-chip>
+                                <input [placeholder]="form_elem?.label"
+                                    (focus)="openDialog(i, form_elem?.field, $event)" [matChipInputFor]="chipList"
+                                    [matChipInputAddOnBlur]="false">
+                            </mat-chip-list>
+                        </mat-form-field>
+                    </div>
+
+                    <button mat-flat-button color="primary" style="width: 100%;" [disabled]="!formGroup.valid"
+                        (click)="submitForm()">Save</button>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="fullWidth innerContainer" *ngIf="showPreview && !showLoader">
+            <h3>
+                {{userName}}
+            </h3>
+            <p *ngIf="userState"><b style="color: #999;">( State: {{userState}} )</b> </p>
+            <div style="width: 100%;">
+                <mat-list>
+                    <ng-container *ngFor="let role of profileRoles">
+                        <div mat-subheader>{{role?.title}}</div>
+                        <mat-list-item *ngFor="let entity of role?.entities">
+                            <mat-icon mat-list-icon>business</mat-icon>
+                            <div mat-line>{{entity.name}}</div>
+                        </mat-list-item>
+                        <mat-divider></mat-divider>
+
+                    </ng-container>
+                </mat-list>
+            </div>
+        </div>
+    </div>
+
+    <app-loader [show]="showLoader"></app-loader>
