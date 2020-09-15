@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+    // background: green;
+}
+
+.content {
+    flex: 1;
+    // background: blue;
+    // overflow-y: scroll;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+
+    .innerContainer {
+        overflow: hidden;
+
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1;
+
+    .field {
+        flex: 1;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
+    background: #fff;
+
+    .footerBtn {
+        padding: 0px 35px !important;
+        margin: 0 5px;
+    }
+}
+
+.nodata {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}

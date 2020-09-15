@@ -1,0 +1,36 @@
+
+ .profile-form{
+     margin: 20px;
+     mat-form-field {
+        width: 100%;
+     }
+ }
+
+ .container {
+    max-width: 700px;
+
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     width: 100%;
+ }
+ .innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+ }
+
+ .fullWidth {
+     width: 100%;
+ }
+
+ ::ng-deep .mat-list .mat-list-item .mat-line{
+    word-wrap: break-word;
+   white-space: pre-wrap;
+}
+
+.special {
+    background: red;
+}
