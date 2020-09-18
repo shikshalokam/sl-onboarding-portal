@@ -9,12 +9,13 @@
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Save</button>
 </mat-dialog-actions> -->
 
-<div class="container">
+<div class="outerContainer">
   <div class="header">
     <mat-form-field class="field">
       <mat-label>Search for {{data?.entityType}}</mat-label>
-      <input matInput type="text"  #input >
-      <button mat-button  matSuffix mat-icon-button aria-label="Clear" (click)="search='';getEntityList()" *ngIf="search">
+      <input matInput type="text" #input>
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="search='';getEntityList()"
+        *ngIf="search">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>
@@ -22,19 +23,25 @@
   <div class="content">
     <div class="innerContainer">
       <div *ngIf="!entityList?.length" class="nodata">
-          No data found
+        No data found
       </div>
-      <mat-selection-list #item [multiple]="false" >
-        <mat-list-option *ngFor="let entity of entityList;let i = index" [value]="entity?._id" (click)="onSelection(i)">
-          {{entity?.label}}
-        </mat-list-option>
+      <mat-selection-list #item [multiple]="false">
+        <ng-container *ngFor="let entity of entityList;let i = index">
+          <mat-list-option [value]="entity?._id" (click)="onSelection(i)">
+            {{entity?.label}} 
+          </mat-list-option>
+          <mat-divider></mat-divider>
+        </ng-container>
+
       </mat-selection-list>
-      <button mat-flat-button color="primary" style="width: 100%;" (click)="loadMore()" *ngIf="enableLoader">Load More</button>
+      <button mat-flat-button color="primary" style="width: 100%;" (click)="loadMore()" *ngIf="enableLoader">Load
+        More</button>
 
     </div>
   </div>
   <div class="footer" mat-dialog-actions>
     <button mat-button class="footerBtn" (click)="close('cancel')">Cancel</button>
-    <button mat-raised-button color="primary" class="footerBtn" (click)="close('save')" [disabled]="selectedIndex<0">Save</button>
+    <button mat-raised-button color="primary" class="footerBtn" (click)="close('save')"
+      [disabled]="selectedIndex<0">Save</button>
   </div>
 </div>

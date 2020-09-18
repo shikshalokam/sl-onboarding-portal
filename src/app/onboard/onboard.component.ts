@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SelectEntityModalComponent } from '../select-entity-modal/select-entity-modal.component';
 import { KeycloakService } from 'keycloak-angular';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-onboard',
@@ -23,7 +24,8 @@ export class OnboardComponent implements OnInit {
   }
   entityTypeForm = [];
   dynamicForm = [];
-
+  appName = environment.appName;
+  tc: boolean = false;
 
   selectedState;
   selectedRole;
@@ -54,6 +56,7 @@ export class OnboardComponent implements OnInit {
     const dialogRef = this.dialog.open(SelectEntityModalComponent, {
       height: '100vh',
       width: '100vw',
+      maxWidth:'100vw',
       data: {
         entityType: entityType,
         highestEntity: highestEntity
@@ -140,7 +143,8 @@ export class OnboardComponent implements OnInit {
       )
       this.formGroup = this.fb.group(
         {
-          state: ['', [Validators.required]]
+          state: ['', [Validators.required]],
+          tc:[false, [Validators.required]]
         }
       );
 
