@@ -29,8 +29,11 @@
                             </mat-chip-list>
                         </mat-form-field>
                     </div>
+                    <section class="tc">
+                        <mat-checkbox formControlName="tc">I agree to share the information with {{appName}}</mat-checkbox>
+                    </section>
 
-                    <button mat-flat-button color="primary" style="width: 100%;" [disabled]="!formGroup.valid"
+                    <button mat-flat-button color="primary" style="width: 100%;" [disabled]="!formGroup.valid || !formGroup.value.tc"
                         (click)="submitForm()">Save</button>
 
                 </form>
